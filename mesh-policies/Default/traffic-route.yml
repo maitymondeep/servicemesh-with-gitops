@@ -1,0 +1,21 @@
+apiVersion: kuma.io/v1alpha1
+kind: TrafficRoute
+mesh: default
+metadata:
+  name: route-all-default
+  ownerReferences:
+  - apiVersion: kuma.io/v1alpha1
+    kind: Mesh
+    name: default
+spec:
+  conf:
+    destination:
+      kuma.io/service: '*'
+    loadBalancer:
+      roundRobin: {}
+  destinations:
+  - match:
+      kuma.io/service: '*'
+  sources:
+  - match:
+      kuma.io/service: '*'

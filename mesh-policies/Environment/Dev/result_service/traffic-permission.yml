@@ -1,0 +1,12 @@
+apiVersion: kuma.io/v1alpha1
+kind: TrafficPermission
+mesh: default
+metadata:
+  name: result.mesh-demo.svc.5001
+spec:
+  sources:
+    - match:
+        kuma.io/service: db_mesh-demo_svc_5432
+  destinations:
+    - match:
+        kuma.io/service: result_mesh-demo_svc_5001
