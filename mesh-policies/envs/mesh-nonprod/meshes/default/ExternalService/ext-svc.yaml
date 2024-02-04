@@ -1,13 +1,13 @@
-apiVersion: kuma.io/v1alpha1
-kind: ExternalService
-mesh: default
-metadata:
-  name: pgsql-eli-db-dev-postgres-database-azure-com-5432
-spec:
-  tags:
-    kuma.io/service: pgsql-eli-db-dev-postgres-database-azure-com-5432
-    kuma.io/protocol: tcp
-  networking:
-    address: pgsql-eli-db-dev.postgres.database.azure.com:5432
-    tls: # optional
-      enabled: false
+# apiVersion: kuma.io/v1alpha1
+# kind: ExternalService
+# mesh: default
+# metadata:
+#   name: pgsql-eli-db-dev-postgres-database-azure-com-5432
+# spec:
+#   tags:
+#     kuma.io/service: pgsql-eli-db-dev-postgres-database-azure-com-5432
+#     kuma.io/protocol: tcp
+#   networking:
+#     address: pgsql-eli-db-dev.postgres.database.azure.com:5432
+#     tls: # optional
+#       enabled: false

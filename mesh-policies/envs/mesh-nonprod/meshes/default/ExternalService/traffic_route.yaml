@@ -1,15 +1,15 @@
-apiVersion: kuma.io/v1alpha1
-kind: TrafficRoute
-mesh: default
-metadata:
-  name: pgsql-eli-db-dev.postgres.database.azure.com.5432.ext
-spec:
-  sources:
-    - match:
-        kuma.io/service: result_mesh-demo_svc_5001
-  destinations:
-    - match:
-        kuma.io/service: pgsql-eli-db-dev-postgres-database-azure-com-5432
-  conf:
-    destination:
-      kuma.io/service: pgsql-eli-db-dev-postgres-database-azure-com-5432
+# apiVersion: kuma.io/v1alpha1
+# kind: TrafficRoute
+# mesh: default
+# metadata:
+#   name: pgsql-eli-db-dev.postgres.database.azure.com.5432.ext
+# spec:
+#   sources:
+#     - match:
+#         kuma.io/service: result_mesh-demo_svc_5001
+#   destinations:
+#     - match:
+#         kuma.io/service: pgsql-eli-db-dev-postgres-database-azure-com-5432
+#   conf:
+#     destination:
+#       kuma.io/service: pgsql-eli-db-dev-postgres-database-azure-com-5432
