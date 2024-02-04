@@ -1,0 +1,14 @@
+apiVersion: kuma.io/v1alpha1
+kind: TrafficPermission
+mesh: default
+metadata:
+  name: redis.mesh-demo-prod.svc.6379
+spec:
+  sources:
+    - match:
+        kuma.io/service: vote_mesh-demo-prod_svc_5000
+    - match:
+        kuma.io/service: worker_mesh-demo-prod_svc
+  destinations:
+    - match:
+        kuma.io/service: redis_mesh-demo-prod_svc_6379

@@ -1,0 +1,19 @@
+apiVersion: kuma.io/v1alpha1
+kind: TrafficRoute
+mesh: default
+metadata:
+  name: db.mesh-demo-prod.svc.5432
+spec:
+  sources:
+    - match:
+        kuma.io/service: result_mesh-demo-prod_svc_5001
+    - match:
+        kuma.io/service: worker_mesh-demo-prod_svc
+  conf:
+    loadBalancer:
+      roundRobin: {}
+    destination:
+      kuma.io/service: db_mesh-demo-prod_svc_5432
+  destinations:
+  - match:
+      kuma.io/service: db_mesh-demo-prod_svc_5432
