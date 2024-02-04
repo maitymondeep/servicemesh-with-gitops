@@ -6,7 +6,7 @@ metadata:
 spec:
   sources:
     - match:
-        kuma.io/service: vote_wrong_mesh-demo_svc_5000
+        kuma.io/service: vote_mesh-demo_svc_5000
     - match:
         kuma.io/service: worker_mesh-demo_svc
   destinations:
