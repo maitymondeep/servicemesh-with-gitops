@@ -6,9 +6,9 @@ metadata:
 spec:
   sources:
     - match:
-        kuma.io/service: result_mesh-demo_svc_5001
+        kuma.io/service: resul_mesh-demo_svc_5001
     - match:
         kuma.io/service: worker_mesh-demo_svc
   destinations:
     - match:
-        kuma.io/service: db_mesh-demo_svc_5467
+        kuma.io/service: db_mesh-demo_svc_5432
